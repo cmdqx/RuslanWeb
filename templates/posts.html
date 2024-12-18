@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta title="Посты">
+</head>
+
+<body>
+     <h4><a href="/">Вернуться на домашнюю страницу</a></h4>
+
+     <form method="post">
+        <input type="text" id="post_search" name="post_search" class="form-controll" placeholder="Поиск Постов" required>
+        <button type="submit" class="post_search_btn">Поиск</button>
+     </form>
+
+     <h3>Вошёл как {{__logined}}</h3>
+     <h4>Всего постов: {{__posts_counter}}</h4>
+     <h3>Посты:</h3>
+     
+     <h2><a style="color : red">{{__error}}</a></h2>
+
+     {% for i in __posts %}
+     <hr>
+     <h1 style="color: red">{{i[1]}}</h1>
+     <h3 style="color: rgb(0, 127, 97)">{{i[2]}}</h3>
+     <h4 style="color: rgb(35, 0, 78)">Айди поста: {{i[0]}}</h4>
+     <h4 style="color: rgb(35, 0, 78)">Автор публикации: {{i[3]}}</h4>
+     <h4 style="color: rgb(35, 0, 78)">Дата Публикации: {{i[4]}}</h4>
+
+     <hr>
+      
+     {% endfor %}
+     
+</body>

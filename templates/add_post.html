@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta title="Добавить пост">
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="/">Вернуться на главную страницу</a>
+        <a href="/posts">Открыть страницу с постами</a>
+        <h1>Создание поста в нашем сервисе!</h1>
+        <p>Заполните поля и нажмите на кнопку публикации</p>
+        <p>Публикация будет произведена от аккаунта: {{__loggined}}</p>
+        <hr>
+        <form method="post">
+            <label for="post_name"><b>Имя Поста</b></label>
+            <input type="text" id="post_name" name="post_name" class="form-controll" placeholder="Имя Поста" required>
+        
+            <label for="post_text"><b>Текст Поста</b></label>
+            <input type="text" id="post_text" name="post_text" class="form-controll" size="100" placeholder="Текст Поста" required>
+            <hr>
+        
+            <button type="submit" class="publishbtn">Опубликовать</button>
+        </form>
+      </div>
+</body>
